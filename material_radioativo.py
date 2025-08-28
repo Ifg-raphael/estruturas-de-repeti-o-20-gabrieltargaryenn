@@ -2,14 +2,14 @@
 
 massa = float(input())
 
-tempo_total = 0  
+tempo = 0  
 
 while massa >= 0.5:
     massa /= 2
-    tempo_total += 50
+    tempo += 50
 
-horas = tempo_total // 3600
-minutos = (tempo_total % 3600) // 60
-segundos = tempo_total % 60
+horas = tempo // 3600
+minutos = (tempo % 3600) // 60
+segundos = tempo % 60
 
 print(f"{int(horas)}h {int(minutos)}m {int(segundos)}s")
