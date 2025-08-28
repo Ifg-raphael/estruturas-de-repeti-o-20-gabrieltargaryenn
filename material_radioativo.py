@@ -2,7 +2,7 @@
 
 massa = float(input())
 
-tempo_total = 0  # tempo em segundos
+tempo_total = 0  
 
 while massa >= 0.5:
     massa /= 2
