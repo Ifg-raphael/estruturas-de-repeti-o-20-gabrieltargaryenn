@@ -1,16 +1,17 @@
 # Sua solução aqui
 
-massa_inicial = float(input())
+massa = float(input())
 
-massa = massa_inicial
-tempo_segundos = 0
-
+n = 0
 while massa >= 0.5:
-    massa /= 2
-    tempo_segundos += 50
+    n += 1
+    massa = massa / 2
 
-horas = tempo_segundos // 3600
-minutos = (tempo_segundos % 3600) // 60
-segundos = tempo_segundos % 60
+tempo = n * 50
 
-print(f"{int(horas)}h {int(minutos)}m {int(segundos)}s")
+horas = tempo // 3600
+tempo = tempo % 3600
+minutos = tempo // 60
+segundos = tempo % 60
+
+print(f"{horas}h {minutos}m {segundos}s")
