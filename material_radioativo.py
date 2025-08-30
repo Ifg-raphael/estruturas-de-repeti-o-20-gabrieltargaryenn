@@ -1,15 +1,17 @@
 # Sua solução aqui
 
-massa = float(input())
+import math
 
-tempo_total = 0 
+massa_inicial = float(input())
 
-while massa >= 0.5:
-    massa /= 2
-    tempo_total += 50
+# calcula número mínimo de decaimentos
+n = math.ceil(math.log(massa_inicial / 0.5, 2))
 
-horas = tempo_total // 3600
-minutos = (tempo_total % 3600) // 60
-segundos = tempo_total % 60
+# tempo total em segundos
+tempo_segundos = n * 50
+
+horas = tempo_segundos // 3600
+minutos = (tempo_segundos % 3600) // 60
+segundos = tempo_segundos % 60
 
 print(f"{int(horas)}h {int(minutos)}m {int(segundos)}s")
